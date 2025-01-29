@@ -1,0 +1,197 @@
+:root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #00cec9;
+    --background-color: #0c0c1e;
+    --text-color: #ecf0f1;
+    --input-bg: rgba(236, 240, 241, 0.1);
+    --input-border: rgba(236, 240, 241, 0.3);
+    --input-focus: #00cec9;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  background-color: var(--background-color);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(108, 92, 231, 0.1) 0%, transparent 20%),
+    radial-gradient(circle at 90% 80%, rgba(0, 206, 201, 0.1) 0%, transparent 20%);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+h1 {
+  color: var(--primary-color);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px var(--primary-color), 0 0 20px var(--primary-color);
+  }
+  to {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--primary-color), 0 0 40px var(--primary-color);
+  }
+}
+
+form {
+  width: 80%;
+  max-width: 800px;
+  padding: 3rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotateX(0) rotateY(0); }
+  25% { transform: translateY(-10px) rotateX(5deg) rotateY(5deg); }
+  50% { transform: translateY(0) rotateX(-5deg) rotateY(-5deg); }
+  75% { transform: translateY(10px) rotateX(5deg) rotateY(-5deg); }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.form-group:hover {
+  transform: translateZ(20px);
+}
+
+.label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.input {
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--input-focus);
+  box-shadow: 0 0 0 3px rgba(0, 206, 201, 0.3);
+  transform: translateZ(30px);
+}
+
+.mb-20 {
+  margin-bottom: 1.25rem;
+}
+
+.submit {
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  width: 60%;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.submit:hover {
+  background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.submit:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btnSubmit {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+textarea {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.flexCol {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  form {
+    width: 95%;
+    padding: 2rem;
+  }
+
+  .flexCol {
+    flex-direction: column;
+  }
+
+  .submit {
+    width: 100%;
+  }
+}
+
+/* Add some custom animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.form-group {
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.form-group:nth-child(1) { animation-delay: 0.1s; }
+.form-group:nth-child(2) { animation-delay: 0.2s; }
+.form-group:nth-child(3) { animation-delay: 0.3s; }
+/* ... continue for other form groups */
+
+/* Add a pulsating effect to the submit button */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.submit:hover {
+  animation: pulse 1.5s infinite;
+}

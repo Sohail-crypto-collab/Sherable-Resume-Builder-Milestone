@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Interactive Resume</title>
+    <link rel="stylesheet" href="resumeStyle.css">
+</head>
+
+<body>
+
+    <div class="resume-container">
+        <!-- left section -->
+
+        <div class="left-section">
+            <img id="resImg" src="profile picture.jpeg" alt="Profile Picture">
+            <section id="objective">
+                <h2 style="color: white;">Career Objective</h2>
+                <p style="text-align: justify; hyphens: auto;"><span id="resCarDiscription"></span></p>
+            </section>
+
+            <section id="certification">
+                <h2 style="color: white;">Certification</h2>
+                <p><b><span id="resCourse1"></span> </b><span id="resCourseLocation1"></span></p>
+                <p><b><span id="resCourse2"></span> </b><span id="resCourseLocation2"></span></p>
+
+            </section>
+
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <!-- <h1>Static interactive Resume</h1> -->
+            <!-- Personal Information -->
+            <section id="personal-info">
+                <h3>Personal Information</h3>
+                <p><b>Name: </b><span id="resName"></span></p>
+                <p><b>Age: </b><span id="resAge"></span></p>
+                
+                <p><b>Contact: </b><span id="resContact"></span></p>
+                <p><b>Email: </b><a href="" target="_blank"><span id="resEmail"></span></a></p>
+                <p><b>LinkedIn: </b><a href="" target="_blank"><span id="resLinkedIn"></span></a></p>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education">
+                <h3>Education</h3>
+                <p><b><span id="resDegree1"></span>: </b><span id="resInstitute1"></span> (<span id="resPass1"></span>)
+                </p>
+                <p><b><span id="resDegree2"></span>: </b><span id="resInstitute2"></span> (<span id="resPass2"></span>)
+                </p>
+                <!-- <p><b>Matriculation:</b> Matriculation from Hassan's Central Public School (2001-2002)</p> -->
+            </section>
+
+            <!-- Skills -->
+            <section id="skills">
+                <h3>Skills</h3>
+                <ul>
+                    <li><span id="resSkill1" style="text-transform: capitalize;"></span></li>
+                    <li><span id="resSkill2" style="text-transform: capitalize;"></span></li>
+                    <li><span id="resSkill3" style="text-transform: capitalize;"></span></li>
+                    <li><span id="resSkill4" style="text-transform: capitalize;"></span></li>
+                    <li><span id="resSkill5" style="text-transform: capitalize;"></span></li>
+                    <li><span id="resSkill6" style="text-transform: capitalize;"></span></li>
+                </ul>
+
+            </section>
+
+            <!-- Work Experience Section -->
+            <section id="work experience">
+                <h3>
+                    Work Experience
+                </h3>
+                <p><b>Organization: </b><span id="resOrg"></span></p>
+                <p><b>Role: </b><span id="resRole"></span></p>
+                <p><b>Year: </b><span id="resStYear"></span>-<span id="resEndYear"></span></p>
+
+            </section>
+
+            <!-- Adding Button -->
+            <div class="btnDiv">
+                <button id="toggle-skills" style="color: white;">Hide / Show Skills</button>
+                <button id="print_btn" style="color: white " ;>Print</button>
+                <button id="edit_btn" style="color: white " ;>Edit</button>
+                <a id="anc" href=""><button id="share_btn" style="color: white " ;>Shareable Link</button></a>
+                <button id="copy_btn" style="color: white " ;>Copy Link</button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="resumeScript.js"></script>
+</body>
+
+</html>

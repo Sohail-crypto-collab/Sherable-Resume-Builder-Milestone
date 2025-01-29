@@ -1,0 +1,76 @@
+"use strict";
+let Myname = document.getElementById("name");
+let pic = document.getElementById("pic");
+let age = document.getElementById("age");
+let marStatus = document.getElementById("marStatus");
+let gender = document.getElementById("gender");
+let contact = document.getElementById("contact");
+let email = document.getElementById("email");
+let linkdin = document.getElementById("linkdin");
+let degree1 = document.getElementById("degree1");
+let institute1 = document.getElementById("institute1");
+let pass1 = document.getElementById("pass1");
+let degree2 = document.getElementById("degree2");
+let institute2 = document.getElementById("institute2");
+let pass2 = document.getElementById("pass2");
+let careerDiscr = document.getElementById("careerDiscr");
+let course1 = document.getElementById("course1");
+let courseLocation1 = document.getElementById("courseLocation1");
+let course2 = document.getElementById("course2");
+let courseLocation2 = document.getElementById("courseLocation2");
+let skill1 = document.getElementById("skill1");
+let skill2 = document.getElementById("skill2");
+let skill3 = document.getElementById("skill3");
+let skill4 = document.getElementById("skill4");
+let skill5 = document.getElementById("skill5");
+let skill6 = document.getElementById("skill6");
+let org = document.getElementById("org");
+let role = document.getElementById("role");
+let stYear = document.getElementById("stYear");
+let endYear = document.getElementById("endYear");
+let submitBtn = document.getElementById("submitBtn");
+let form = document.getElementById("form");
+// // Options ko dynamically display karne ke liye array
+// let marital_status_options = ["Single", "Married", "Divorced", "Widowed"];
+// // Get the display element
+// let resMarStatus = document.getElementById('resMarStatus');
+form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    localStorage.setItem("name", Myname.value);
+    localStorage.setItem("age", age.value);
+    localStorage.setItem("marStatus", marStatus.value);
+    localStorage.setItem("gender", gender.value);
+    localStorage.setItem("contact", contact.value);
+    localStorage.setItem("email", email.value);
+    localStorage.setItem("linkdin", linkdin.value);
+    localStorage.setItem("degree1", degree1.value);
+    localStorage.setItem("institute1", institute1.value);
+    localStorage.setItem("pass1", pass1.value);
+    localStorage.setItem("degree2", degree2.value);
+    localStorage.setItem("institute2", institute2.value);
+    localStorage.setItem("pass2", pass2.value);
+    localStorage.setItem("careerDiscr", careerDiscr.value);
+    localStorage.setItem("course1", course1.value);
+    localStorage.setItem("courseLocation1", courseLocation1.value);
+    localStorage.setItem("course2", course2.value);
+    localStorage.setItem("courseLocation2", courseLocation2.value);
+    localStorage.setItem("skill1", skill1.value);
+    localStorage.setItem("skill2", skill2.value);
+    localStorage.setItem("skill3", skill3.value);
+    localStorage.setItem("skill4", skill4.value);
+    localStorage.setItem("skill5", skill5.value);
+    localStorage.setItem("skill6", skill6.value);
+    localStorage.setItem("org", org.value);
+    localStorage.setItem("role", role.value);
+    localStorage.setItem("stYear", stYear.value);
+    localStorage.setItem("endYear", endYear.value);
+    if (pic.files && pic.files[0]) {
+        let reader = new FileReader();
+        reader.addEventListener("load", () => {
+            let textImg = reader.result;
+            localStorage.setItem("profile_pic", textImg);
+        });
+        reader.readAsDataURL(pic.files[0]);
+    }
+    window.location.href = "./resume/resume.html";
+});

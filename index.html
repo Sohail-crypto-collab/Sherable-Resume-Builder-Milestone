@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Shareable Dynamic Resume Builder</h1>
+    <form id="form">
+        <h2>Personal Details</h2>
+        <hr style="margin-bottom: 20px;">
+        <div class="form-group">
+            <Label class="label" for="name">Name</Label>
+            <input class="input" type="text" id="name" placeholder="Full Name">
+        </div>
+        <div class="form-group">
+            <Label class="label" for="pic">Profile Picture</Label>
+            <input class="input" type="file" id="pic">
+        </div>
+        <div class="flexCol">
+            <div class="form-group" style="margin-right: 80px;">
+                <Label class="label" for="age">Age</Label>
+                <input class="input" type="text" id="age">
+            </div>
+            <div class="form-group">
+                <label class="label" for="marStatus">Marital Status</label>
+                <input class="input" type="text" id="marStatus" placeholder="Married / Unmarried">
+                <!-- <datalist id="marital_status_options">
+            <option value="Single">
+            <option value="Married">
+            <option value="Divorced">
+            <option value="Widowed">
+        </datalist> -->
+            </div>
+        </div>
+        <div class="flexCol">
+            <div class="form-group" style="margin-right: 80px;">
+                <Label class="label" for="gender">Gender</Label>
+                <input class="input" type="tel" id="gender" placeholder="Male / Female/ Others">
+            </div>
+
+            <div class="form-group">
+                <Label class="label" for="contact">Contact</Label>
+                <input class="input" type="tel" id="contact" placeholder="11-Digits Number">
+            </div>
+        </div>
+        <div class="form-group">
+            <Label class="label" for="email">Email</Label>
+            <input class="input" type="text" id="email" placeholder="Enter Your Active Email">
+        </div>
+        <div class="form-group">
+            <Label class="label" for="linkdin">LinkedIn</Label>
+            <input class="input" type="text" id="linkdin">
+        </div>
+
+        <h2>Education</h2>
+        <hr style="margin-bottom: 20px;">
+        <div class="flexCol">
+            <div class="form-group" style="margin-right: 80px;">
+                <Label class="label" for="degree1">Degree</Label>
+                <input class="input" type="text" id="degree1">
+            </div>
+            <div class="form-group">
+                <Label class="label" for="pass1">Passing Year</Label>
+                <input class="input" type="text" id="pass1">
+            </div>
+        </div>
+        <div class="form-group">
+            <Label class="label" for="institute1">Institute</Label>
+            <input class="input" type="text" id="institute1">
+        </div>
+
+        <div class="flexCol">
+            <div class="form-group" style="margin-right: 80px;">
+                <Label class="label" for="degree2">Degree</Label>
+                <input class="input" type="text" id="degree2">
+            </div>
+            <div class="form-group">
+                <Label class="label" for="pass2">Passing Year</Label>
+                <input class="input" type="text" id="pass2">
+            </div>
+        </div>
+        <div class="form-group">
+            <Label class="label" for="institute2">Institute</Label>
+            <input class="input" type="text" id="institute2">
+        </div>
+
+        </div>
+        <h2>Career Objective</h2>
+        <hr style="margin-bottom: 20px;">
+        <div class="form-group">
+            <Label class="label" for="careerDiscr">Experties</Label>
+            <textarea class="input" type="text" id="careerDiscr" style="height: 80px;"></textarea>
+        </div>
+        <h2>Certification</h2>
+        <hr style="margin-bottom: 20px;">
+        <div>
+            <div class="form-group">
+                <Label class="label" for="course1">Course Name</Label>
+                <input class="input" type="text" id="course1">
+            </div>
+            <div class="form-group">
+                <Label class="label" for="courseLocation1">Institute</Label>
+                <input class="input" type="text" id="courseLocation1">
+            </div>
+            <div class="form-group">
+                <Label class="label" for="course2">Course Name</Label>
+                <input class="input" type="text" id="course2">
+            </div>
+            <div class="form-group">
+                <Label class="label" for="courseLocation2">Institute</Label>
+                <input class="input" type="text" id="courseLocation2">
+            </div>
+        </div>
+        <h2>Skills</h2>
+        <hr style="margin-bottom: 20px;">
+
+
+        <div class="flexCol">
+            <div class="form-group" style="margin-right: 80px;">
+                <Label class="label" for="skill1"></Label>
+                <input class="input mb-20" type="text" id="skill1" placeholder="Skill 1">
+            </div>
+            <div class="form-group" style="margin-right: 80px;">
+                <Label class="label" for="skill2"></Label>
+                <input class="input mb-20" type="text" id="skill2" placeholder="Skill 2">
+            </div>
+        </div>
+
+        <div class="flexCol">
+            <div class="form-group" style="margin-right: 80px;">
+                <Label class="label" for="skill3"></Label>
+                <input class="input mb-20" type="text" id="skill3" placeholder="Skill 3">
+            </div>
+            <div class="form-group" style="margin-right: 80px;">
+                <Label class="label" for="skill4"></Label>
+                <input class="input mb-20" type="text" id="skill4" placeholder="Skill 4">
+            </div>
+        </div>
+
+        <div class="flexCol">
+            <div class="form-group" style="margin-right: 80px;">
+                <Label class="label" for="skill5"></Label>
+                <input class="input mb-20" type="text" id="skill5" placeholder="Skill 5">
+            </div>
+            <div class="form-group" style="margin-right: 80px;">
+                <Label class="label" for="skill6"></Label>
+                <input class="input mb-20" type="text" id="skill6" placeholder="Skill 6">
+            </div>
+        </div>
+        <h2>Work Experience</h2>
+        <hr style="margin-bottom: 20px;">
+        <div class="form-group">
+            <Label class="label" for="org">Organization</Label>
+            <input class="input" type="text" id="org">
+        </div>
+        <div class="form-group">
+            <Label class="label" for="roll">Role</Label>
+            <input class="input" type="text" id="role">
+        </div>
+        <div class="form-group">
+            <Label class="label" for="stYear">Start Year</Label>
+            <input class="input" type="text" id="stYear">
+        </div>
+        <div class="form-group">
+            <Label class="label" for="endYear">End Year</Label>
+            <input class="input" type="text" id="endYear">
+        </div>
+        <hr style="margin-bottom: 20px;">
+        <div class="btnSubmit">
+            <input id="submitBtn" class="submit" type="submit">
+        </div>
+    </form>
+
+</body>
+<script src="script.js"></script>
+
+</html>
